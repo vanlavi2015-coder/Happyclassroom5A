@@ -1,0 +1,10 @@
+{
+  "name": "lop-hoc-5a",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website lớp học 5A với thư viện trò chơi học tập",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=22" },
+  "dependencies": { "express": "^4.21.2" }
+}

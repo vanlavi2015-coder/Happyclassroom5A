@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#5145cd"><title>Lớp học 5A | Thư viện trò chơi</title>
+<style>
+:root{--ink:#202447;--muted:#6d7290;--bg:#f5f6ff;--purple:#5145cd;--pink:#f46a9b;--cyan:#4fc6d8;--yellow:#ffca5c;--card:#fff;--line:#e7e8f4}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-rounded,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.layout{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#26234f;color:white;padding:22px 15px}.logo{font-size:23px;font-weight:950;padding:8px 10px 25px}.logo span{color:#ffca5c}.nav button{display:block;width:100%;text-align:left;color:#e8e7ff;background:transparent;border:0;border-radius:12px;padding:12px;margin:3px 0;font-weight:700}.nav button.active,.nav button:hover{background:#4d478a;color:white}.side-note{font-size:12px;color:#b9b7e8;line-height:1.5;padding:20px 10px}.main{padding:25px;max-width:1500px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.top h1{margin:0;font-size:28px}.muted{color:var(--muted);font-size:13px}.pill{background:#efedff;color:#5145cd;border-radius:30px;padding:8px 12px;font-size:12px;font-weight:850}.hero{background:linear-gradient(120deg,#5145cd,#8874f2);color:white;border-radius:24px;padding:25px;display:flex;justify-content:space-between;align-items:center;gap:20px;overflow:hidden;position:relative}.hero h2{font-size:28px;margin:0 0 8px}.hero p{margin:0;opacity:.9}.hero .emoji{font-size:72px;filter:drop-shadow(0 7px 5px #30268a44)}.section{display:none}.section.active{display:block}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:17px 0}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 5px 18px #33305a08}.stat .num{font-size:27px;font-weight:950}.stat .label{color:var(--muted);font-size:13px}.grid-games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.game-card{background:white;border:1px solid var(--line);border-radius:19px;padding:16px;transition:.18s;cursor:pointer;min-height:170px;display:flex;flex-direction:column;gap:7px}.game-card:hover{transform:translateY(-3px);box-shadow:0 10px 25px #3e348e18}.game-icon{width:53px;height:53px;border-radius:16px;display:grid;place-items:center;font-size:28px;background:#f0eeff}.game-card h3{margin:3px 0}.game-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}.game-card .tag{font-size:11px;color:#5145cd;font-weight:850;margin-top:auto;padding-top:7px}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#fff;border-radius:11px;padding:10px 13px;font-weight:800;color:var(--ink)}.btn.primary{background:var(--purple);border-color:var(--purple);color:white}.btn.pink{background:var(--pink);border-color:var(--pink);color:white}.btn:disabled{opacity:.4;cursor:not-allowed}.field{margin:12px 0}.field label{display:block;font-size:13px;font-weight:850;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #d8daeb;border-radius:11px;padding:11px;background:white;color:var(--ink)}.field textarea{min-height:90px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.question-row{display:grid;grid-template-columns:24px 1fr;gap:9px;padding:11px 0;border-bottom:1px solid var(--line)}.question-row:last-child{border:0}.question-row small{color:var(--muted)}.table{width:100%;border-collapse:collapse}.table td,.table th{text-align:left;border-bottom:1px solid var(--line);padding:10px;font-size:13px}.table th{color:var(--muted)}.game-stage{background:white;border:1px solid var(--line);border-radius:24px;padding:25px;max-width:850px;margin:auto;text-align:center}.game-stage .bigemoji{font-size:64px}.game-stage h2{font-size:25px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}.answer{border:2px solid var(--line);background:#fff;border-radius:14px;padding:15px;font-weight:800;text-align:left}.answer:hover{border-color:var(--purple);background:#f7f5ff}.answer.correct{background:#e2f8e9;border-color:#39ad63}.answer.wrong{background:#ffeded;border-color:#ed6a6a}.progress{height:9px;background:#eeeefa;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--pink),var(--purple));width:0;transition:.3s}.toast{position:fixed;right:20px;bottom:20px;background:#242149;color:white;padding:13px 18px;border-radius:12px;box-shadow:0 8px 30px #0002;z-index:100;max-width:90vw}.hide{display:none!important}.small{font-size:12px}.notice{padding:12px;background:#fff8df;border:1px solid #f5df8b;border-radius:12px;font-size:13px;line-height:1.5}.badge{display:inline-block;background:#fff0f6;color:#c43c79;padding:5px 9px;border-radius:30px;font-size:11px;font-weight:850}
+@media(max-width:950px){.layout{grid-template-columns:1fr}.sidebar{padding:10px 12px;position:static}.logo{padding:7px 8px 12px}.nav{display:flex;overflow:auto;gap:4px}.nav button{white-space:nowrap;width:auto;margin:0}.side-note{display:none}.main{padding:15px}.grid-games{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid-games,.two{grid-template-columns:1fr}.hero h2{font-size:23px}.hero .emoji{font-size:48px}.answers{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="logo">🎒 LỚP HỌC <span>5A</span></div>
+  <nav class="nav">
+    <button class="active" data-view="home">🏡 Tổng quan</button>
+    <button data-view="games">🎮 Thư viện trò chơi</button>
+    <button data-view="bank">📚 Ngân hàng câu hỏi</button>
+    <button data-view="create">✨ Tạo trò chơi</button>
+    <button data-view="results">🏆 Kết quả & thành tích</button>
+  </nav>
+  <div class="side-note">🌟 Học vui – Chơi giỏi – Cùng tiến bộ!<br><br>Phiên bản khởi đầu độc lập, không kết nối hay thay đổi dữ liệu LAVI.</div>
+</aside>
+<main class="main">
+<header class="top"><div><h1 id="pageTitle">Chào mừng đến lớp 5A! 👋</h1><div class="muted">Thư viện trò chơi học tập · Năm học 2026–2027</div></div><span class="pill">⭐ Mỗi lượt chơi là một cơ hội tiến bộ</span></header>
+
+<section id="home" class="section active">
+  <div class="hero"><div><h2>Học tập vui vẻ, khám phá mỗi ngày!</h2><p>Chọn trò chơi, thử thách kiến thức và chinh phục những ngôi sao.</p><div class="row" style="margin-top:18px"><button class="btn pink" onclick="navigate('games')">🎮 Khám phá trò chơi</button><button class="btn" onclick="navigate('create')">✨ Tạo trò chơi mới</button></div></div><div class="emoji">🦊🎈</div></div>
+  <div class="stats"><div class="stat"><div>🎲</div><div class="num" id="statGames">10</div><div class="label">Loại trò chơi mẫu</div></div><div class="stat"><div>📚</div><div class="num" id="statQuestions">5</div><div class="label">Câu hỏi ban đầu</div></div><div class="stat"><div>🏅</div><div class="num" id="statResults">0</div><div class="label">Lượt chơi đã lưu</div></div><div class="stat"><div>✨</div><div class="num" id="statStars">0</div><div class="label">Sao đạt được</div></div></div>
+  <h2>🌈 Chơi ngay</h2><div class="grid-games" id="featuredGames"></div>
+</section>
+
+<section id="games" class="section">
+  <div class="row" style="justify-content:space-between;margin-bottom:14px"><div><h2>🎮 Thư viện trò chơi</h2><div class="muted">Chọn một trò chơi để bắt đầu hoặc tạo phiên chơi cho lớp.</div></div><button class="btn primary" onclick="navigate('create')">＋ Tạo trò chơi</button></div>
+  <div class="grid-games" id="allGames"></div>
+</section>
+
+<section id="bank" class="section">
+  <div class="two">
+    <div class="card"><h2>📚 Ngân hàng câu hỏi</h2><p class="muted">Câu hỏi được dùng lại cho nhiều loại trò chơi.</p>
+      <div class="field"><label>Mã giáo viên (được cấu hình trên Render)</label><input id="teacherPin" type="password" placeholder="Nhập mã giáo viên"></div>
+      <div class="notice">Mã giáo viên chỉ dùng trong phiên làm việc này. Không nhập mật khẩu tài khoản cá nhân hoặc chia sẻ mã này với học sinh.</div>
+      <div class="field"><label>Môn học</label><select id="qSubject"><option>Toán</option><option>Tiếng Việt</option><option>Khoa học</option><option>Lịch sử và Địa lí</option><option>Công nghệ</option><option>Giáo dục địa phương</option></select></div>
+      <div class="field"><label>Tên bài học</label><input id="qLesson" placeholder="Ví dụ: Diện tích hình thang"></div>
+      <div class="field"><label>Nội dung câu hỏi</label><textarea id="qText" placeholder="Nhập câu hỏi..."></textarea></div>
+      <div class="field"><label>4 phương án trả lời (mỗi dòng một phương án)</label><textarea id="qOptions" placeholder="Phương án A&#10;Phương án B&#10;Phương án C&#10;Phương án D"></textarea></div>
+      <div class="field"><label>Đáp án đúng</label><select id="qAnswer"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select></div>
+      <div class="field"><label>Giải thích đáp án</label><textarea id="qExplanation" placeholder="Giải thích ngắn gọn..."></textarea></div>
+      <button class="btn primary" onclick="addQuestion()">＋ Lưu câu hỏi</button>
+    </div>
+    <div class="card"><h2>🧩 Câu hỏi hiện có</h2><div id="questionList"></div></div>
+  </div>
+</section>
+
+<section id="create" class="section">
+ <div class="two">
+  <div class="card"><h2>🎯 Tạo trò chơi từ ngân hàng</h2>
+    <div class="field"><label>Mã giáo viên</label><input id="createPin" type="password" placeholder="Nhập mã giáo viên"></div>
+    <div class="field"><label>Tên trò chơi</label><input id="gameTitle" placeholder="Ví dụ: Chinh phục hình học"></div>
+    <div class="field"><label>Chọn hình thức trò chơi</label><select id="gameType"></select></div>
+    <div class="field"><label>Chế độ chơi</label><select id="playMode"><option value="individual">Học sinh chơi trên thiết bị riêng</option><option value="teams">Giáo viên điều khiển, thi theo đội</option></select></div>
+    <div class="field"><label>Chọn câu hỏi muốn dùng</label><div id="selectQuestions"></div></div>
+    <button class="btn primary" onclick="createGame()">💾 Lưu trò chơi</button>
+  </div>
+  <div class="card"><h2>🤖 AI hỗ trợ tạo trò chơi</h2><p class="muted">Mô tả bài học, nội dung và mức độ. AI sẽ đề xuất câu hỏi mới rồi lưu vào ngân hàng dùng chung.</p>
+    <div class="field"><label>Mã giáo viên</label><input id="aiPin" type="password" placeholder="Nhập mã giáo viên"></div>
+    <div class="field"><label>Yêu cầu tạo câu hỏi</label><textarea id="aiPrompt" placeholder="Ví dụ: Tạo 8 câu hỏi Toán lớp 5 về diện tích hình thang, có 5 câu cơ bản và 3 câu vận dụng thực tế."></textarea></div>
+    <button class="btn pink" onclick="createWithAI()">✨ Tạo câu hỏi bằng AI</button>
+    <div id="aiMessage" class="muted" style="margin-top:12px"></div>
+    <div class="notice" style="margin-top:15px">Để dùng AI thật, cần cấu hình OPENAI_API_KEY riêng trong Render. Nếu chưa cấu hình, ngân hàng câu hỏi mẫu vẫn hoạt động.</div>
+  </div>
+ </div>
+</section>
+
+<section id="results" class="section">
+ <div class="card"><h2>🏆 Kết quả và thành tích</h2><p class="muted">Lưu kết quả theo tên người chơi; khi hệ thống tài khoản học sinh được bổ sung, kết quả sẽ gắn với tài khoản tương ứng.</p><div id="resultsList"></div></div>
+</section>
+
+<section id="play" class="section">
+ <div class="game-stage">
+   <div class="bigemoji" id="playEmoji">🎮</div><div class="badge" id="playType">TRÒ CHƠI</div>
+   <h2 id="playTitle">Bắt đầu thử thách!</h2><div class="progress"><span id="playProgress"></span></div>
+   <p class="muted" id="playCount"></p><h3 id="playQuestion"></h3>
+   <div class="answers" id="playAnswers"></div><div id="playFeedback" aria-live="polite"></div>
+   <div class="row" style="justify-content:center;margin-top:15px"><button class="btn" onclick="navigate('games')">← Thư viện</button><button class="btn primary" id="nextQuestion" onclick="nextQ()" disabled>Câu tiếp theo →</button></div>
+ </div>
+</section>
+</main></div><div id="toast" class="toast hide"></div>
+<script>
+const gameTypes=[
+ {id:"wheel",name:"Vòng quay may mắn",emoji:"🎡",desc:"Quay chọn người chơi hoặc câu hỏi ngẫu nhiên.",tag:"Cả lớp",color:"#f0edff"},
+ {id:"duck",name:"Đua vịt tri thức",emoji:"🦆",desc:"Trả lời đúng để tiến nhanh về đích.",tag:"Đua điểm",color:"#e4fbf7"},
+ {id:"puzzle",name:"Lật mảnh ghép",emoji:"🧩",desc:"Mỗi đáp án đúng mở ra một phần bí mật.",tag:"Khám phá",color:"#fff0f6"},
+ {id:"treasure",name:"Săn kho báu",emoji:"🗺️",desc:"Vượt câu hỏi để mở khóa rương báu.",tag:"Phiêu lưu",color:"#fff6df"},
+ {id:"mines",name:"Dò mìn tri thức",emoji:"💣",desc:"Chọn ô an toàn và chinh phục thử thách.",tag:"Chiến thuật",color:"#ffeceb"},
+ {id:"train",name:"Đoàn tàu tri thức",emoji:"🚂",desc:"Sắp xếp câu trả lời để đưa đoàn tàu về ga.",tag:"Sắp xếp",color:"#eaf4ff"},
+ {id:"crossword",name:"Ô chữ bí mật",emoji:"🔠",desc:"Giải từ khóa và mở ô chữ.",tag:"Ngôn ngữ",color:"#f0edff"},
+ {id:"drag",name:"Kéo thả – Nối ý",emoji:"🧲",desc:"Ghép cặp khái niệm, phép tính và kết quả.",tag:"Tương tác",color:"#e4fbf7"},
+ {id:"tug",name:"Kéo co tri thức",emoji:"🪢",desc:"Hai đội thi trả lời đúng để kéo co.",tag:"Đội nhóm",color:"#fff0f6"},
+ {id:"journey",name:"Hành trình vượt ải",emoji:"🏰",desc:"Vượt nhiều chặng để nhận huy hiệu.",tag:"Nhiều cấp độ",color:"#fff6df"}
+];
+let state={questions:[],games:[],results:[]}, current=null, qIndex=0, correct=0, score=0, locked=false, currentQuestions=[];
+const $=id=>document.getElementById(id);
+function toast(msg){$("toast").textContent=msg;$("toast").classList.remove("hide");setTimeout(()=>$("toast").classList.add("hide"),3000)}
+async function api(url,options={}){const r=await fetch(url,{...options,headers:{"Content-Type":"application/json",...(options.headers||{})}});const data=await r.json().catch(()=>({}));if(!r.ok)throw new Error(data.error||"Có lỗi khi kết nối máy chủ.");return data}
+function pin(id){return $(id).value.trim()}
+function teacherHeaders(id){return {"x-teacher-pin":pin(id)}}
+async function load(){try{state=await api("/api/state")}catch(e){toast(e.message)}renderAll()}
+function navigate(view){document.querySelectorAll(".section").forEach(x=>x.classList.remove("active"));$(view).classList.add("active");document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===view));const titles={home:"Chào mừng đến lớp 5A! 👋",games:"🎮 Thư viện trò chơi",bank:"📚 Ngân hàng câu hỏi",create:"✨ Tạo trò chơi học tập",results:"🏆 Kết quả & thành tích",play:"🚀 Cùng chơi nào!"};$("pageTitle").textContent=titles[view]||"Lớp học 5A";if(view==="results")renderResults()}
+document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>navigate(b.dataset.view)));
+function card(g){return `<article class="game-card" onclick="quickPlay('${g.id}')"><div class="game-icon" style="background:${g.color}">${g.emoji}</div><h3>${g.name}</h3><p>${g.desc}</p><div class="tag">${g.tag} · Chơi thử →</div></article>`}
+function renderAll(){const qcount=state.questions.length;$("statQuestions").textContent=qcount;$("statResults").textContent=state.results.length;$("statStars").textContent=state.results.reduce((n,r)=>n+Math.floor(r.score/10),0);$("statGames").textContent=gameTypes.length;$("featuredGames").innerHTML=gameTypes.slice(0,3).map(card).join("");$("allGames").innerHTML=gameTypes.map(card).join("");$("questionList").innerHTML=state.questions.map(q=>`<div class="question-row"><span>❓</span><div><b>${esc(q.question)}</b><br><small>${esc(q.subject)} · ${esc(q.lesson||"Chưa phân bài")} · Đáp án ${"ABCD"[q.answer]||"?"}</small><div class="small muted">${esc(q.explanation||"")}</div></div></div>`).join("")||"<p class='muted'>Chưa có câu hỏi.</p>";$("selectQuestions").innerHTML=state.questions.map(q=>`<label class="question-row"><input type="checkbox" value="${q.id}" checked><span><b>${esc(q.question)}</b><br><small>${esc(q.subject)} · ${esc(q.lesson||"")}</small></span></label>`).join("");$("gameType").innerHTML=gameTypes.map(g=>`<option value="${g.id}">${g.emoji} ${g.name}</option>`).join("");renderResults()}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+async function addQuestion(){const options=$("qOptions").value.split("\n").map(s=>s.trim()).filter(Boolean);try{const data=await api("/api/questions",{method:"POST",headers:teacherHeaders("teacherPin"),body:JSON.stringify({subject:$("qSubject").value,lesson:$("qLesson").value,question:$("qText").value,options,answer:Number($("qAnswer").value),explanation:$("qExplanation").value})});state.questions.push(data.question);renderAll();$("qText").value="";$("qOptions").value="";$("qExplanation").value="";toast("Đã lưu câu hỏi vào ngân hàng!")}catch(e){toast(e.message)}}
+async function createGame(){const questionIds=[...document.querySelectorAll("#selectQuestions input:checked")].map(x=>x.value);try{const data=await api("/api/games",{method:"POST",headers:teacherHeaders("createPin"),body:JSON.stringify({title:$("gameTitle").value||"Trò chơi 5A",gameType:$("gameType").value,mode:$("playMode").value,questionIds})});state.games.push(data.game);toast("Đã lưu trò chơi! Cô có thể mở thư viện để chơi thử.");navigate("games")}catch(e){toast(e.message)}}
+async function createWithAI(){const message=$("aiMessage");message.textContent="Đang tạo câu hỏi…";try{const data=await api("/api/ai/create-game",{method:"POST",headers:teacherHeaders("aiPin"),body:JSON.stringify({prompt:$("aiPrompt").value})});state.questions.push(...data.questions);renderAll();message.textContent=`Đã tạo và lưu ${data.count} câu hỏi vào ngân hàng dùng chung.`;toast("AI đã tạo xong câu hỏi!")}catch(e){message.textContent=e.message}}
+function quickPlay(type){const saved=state.games.filter(g=>g.gameType===type);if(saved.length){const game=saved[saved.length-1];current=game;currentQuestions=state.questions.filter(q=>game.questionIds.includes(q.id))}else{current={id:"demo-"+type,title:gameTypes.find(g=>g.id===type).name,gameType:type};currentQuestions=[...state.questions]}if(!currentQuestions.length){toast("Chưa có câu hỏi cho trò chơi này.");return}currentQuestions=currentQuestions.sort(()=>Math.random()-.5);qIndex=0;correct=0;score=0;locked=false;navigate("play");$("playTitle").textContent=current.title;$("playEmoji").textContent=gameTypes.find(g=>g.id===type).emoji;$("playType").textContent=gameTypes.find(g=>g.id===type).name.toUpperCase();showQ()}
+function showQ(){locked=false;$("nextQuestion").disabled=true;$("playFeedback").textContent="";const q=currentQuestions[qIndex];$("playCount").textContent=`Câu ${qIndex+1}/${currentQuestions.length}`;$("playProgress").style.width=`${qIndex/currentQuestions.length*100}%`;$("playQuestion").textContent=q.question;$("playAnswers").innerHTML=q.options.map((a,i)=>`<button class="answer" onclick="answerQ(${i},this)">${"ABCD"[i]}. ${esc(a)}</button>`).join("");}
+function answerQ(i,btn){if(locked)return;locked=true;const q=currentQuestions[qIndex];const buttons=[...document.querySelectorAll(".answer")];buttons[q.answer]?.classList.add("correct");if(i===q.answer){correct++;score+=10;$("playFeedback").textContent="🎉 Chính xác! +10 điểm";$("playFeedback").style.color="#218849";sound(true)}else{$("playFeedback").textContent="💪 Cố gắng nhé! "+(q.explanation||"");$("playFeedback").style.color="#b45309";btn.classList.add("wrong");sound(false)}$("nextQuestion").disabled=false;$("playProgress").style.width=`${(qIndex+1)/currentQuestions.length*100}%`;if(qIndex===currentQuestions.length-1)$("nextQuestion").textContent="🏁 Xem kết quả";else $("nextQuestion").textContent="Câu tiếp theo →"}
+function nextQ(){if(qIndex<currentQuestions.length-1){qIndex++;showQ();return}finishGame()}
+async function finishGame(){const name=prompt("Nhập tên học sinh/đội chơi để lưu kết quả:");if(name){try{const data=await api("/api/results",{method:"POST",body:JSON.stringify({gameId:current.id,playerName:name,score,correct,total:currentQuestions.length})});state.results.push(data.result)}catch(e){toast(e.message)}}$("playEmoji").textContent=correct===currentQuestions.length?"🏆":"⭐";$("playTitle").textContent=`Bạn trả lời đúng ${correct}/${currentQuestions.length}`;$("playCount").textContent=`Tổng điểm: ${score} · Sao dự kiến: ${Math.floor(score/10)}`;$("playQuestion").textContent=correct===currentQuestions.length?"Xuất sắc! Bạn đã chinh phục thử thách!":"Cảm ơn bạn đã tham gia. Hãy luyện tập thêm nhé!";$("playAnswers").innerHTML="";$("playFeedback").textContent="Mỗi lần cố gắng là một bước tiến!";$("nextQuestion").textContent="Chơi lại";$("nextQuestion").disabled=false;$("nextQuestion").onclick=()=>quickPlay(current.gameType);renderResults()}
+function renderResults(){$("resultsList").innerHTML=state.results.length?`<div style="overflow:auto"><table class="table"><thead><tr><th>Người chơi</th><th>Điểm</th><th>Đúng</th><th>Sao</th><th>Thời gian</th></tr></thead><tbody>${[...state.results].reverse().map(r=>`<tr><td>🌟 ${esc(r.playerName)}</td><td><b>${r.score}</b></td><td>${r.correct}/${r.total}</td><td>${"⭐".repeat(Math.min(5,Math.floor(r.score/10)))}</td><td>${new Date(r.playedAt).toLocaleString("vi-VN")}</td></tr>`).join("")}</tbody></table></div>`:"<p class='muted'>Chưa có lượt chơi được lưu. Hãy chọn một trò chơi để bắt đầu.</p>"}
+function sound(ok){try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const c=new C(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=ok?740:220;g.gain.value=.08;o.start();o.stop(c.currentTime+.13)}catch{}}
+load();
+</script></body></html>
